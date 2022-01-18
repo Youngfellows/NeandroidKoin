@@ -25,4 +25,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
+    <Button
+        android:onClick="onAdv3MakeCoffee"
+        android:text="高低功率咖啡机煮咖啡3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
 </android.support.v7.widget.LinearLayoutCompat>

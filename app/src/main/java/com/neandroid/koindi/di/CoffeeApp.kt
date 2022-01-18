@@ -3,6 +3,7 @@ package com.neandroid.koindi.di
 import com.neandroid.koindi.impl.CoffeeMaker
 import org.koin.core.KoinComponent
 import org.koin.core.inject
+import org.koin.core.parameter.parametersOf
 import org.koin.core.qualifier.named
 
 
@@ -38,5 +39,15 @@ class CoffeeApp : KoinComponent {
     /**
      * 高功率咖啡机1
      */
-    val hightMaker2 by getKoin().getOrCreateScope("highScope", named("hight2")).inject<CoffeeMaker>()
+    val hightMaker2 by getKoin().getOrCreateScope("highScope", named("hight2"))
+        .inject<CoffeeMaker>()
+
+    /**
+     * 带参数的咖啡机
+     */
+    val parameterMaker by getKoin().getOrCreateScope("parameterScope", named("my_parameter"))
+        .inject<CoffeeMaker>() {
+            parametersOf(5555)
+        }
+
 }
