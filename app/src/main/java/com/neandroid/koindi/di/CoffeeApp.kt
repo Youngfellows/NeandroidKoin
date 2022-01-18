@@ -28,4 +28,15 @@ class CoffeeApp : KoinComponent {
      * 高功率咖啡机
      */
     val hightMaker: CoffeeMaker by inject(named("hight"))
+
+
+    /**
+     * 低功率咖啡机1
+     */
+    val lowMaker2: CoffeeMaker by getKoin().getOrCreateScope("lowScope", named("low2")).inject()
+
+    /**
+     * 高功率咖啡机1
+     */
+    val hightMaker2 by getKoin().getOrCreateScope("highScope", named("hight2")).inject<CoffeeMaker>()
 }

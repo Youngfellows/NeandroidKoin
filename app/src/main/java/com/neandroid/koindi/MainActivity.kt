@@ -30,4 +30,13 @@ class MainActivity : AppCompatActivity() {
         lowMaker.brow()
         hightMaker.brow()
     }
+
+    public fun onAdv2MakeCoffee(view: View) {
+        Log.d(TAG, "onAdv2MakeCoffee:: ")
+        val coffeeApp: CoffeeApp = CoffeeApp()
+        val lowMaker = coffeeApp.lowMaker2
+        val hightMaker = coffeeApp.hightMaker2
+        lowMaker.brow()
+        hightMaker.brow()
+    }
 }

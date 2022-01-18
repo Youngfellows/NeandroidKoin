@@ -8,7 +8,11 @@ import com.neandroid.koindi.interfaces.IPump
 /**
  * 咖啡机
  */
-class CoffeeMaker constructor(private val heater: IHeater, private val pump: IPump) : ICoffeeMaker {
+class CoffeeMaker(heater: IHeater, pump: IPump) : ICoffeeMaker {
+
+    private val heater = heater
+
+    private val pump = pump
 
     /**
      * 煮咖啡

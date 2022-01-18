@@ -3,6 +3,7 @@ package com.neandroid.koindi
 import android.app.Application
 import com.neandroid.koindi.di.coffeeMakerModule
 import com.neandroid.koindi.di.coffeeMakerModule1
+import com.neandroid.koindi.di.coffeeMakerModule2
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
@@ -21,7 +22,7 @@ class App : Application() {
             //androidLogger(Level.INFO)
             androidLogger(Level.ERROR)
             androidContext(this@App)
-            modules(coffeeMakerModule1, coffeeMakerModule)
+            modules(coffeeMakerModule, coffeeMakerModule1, coffeeMakerModule2)
         }
     }
 }
